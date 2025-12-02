@@ -1,0 +1,16 @@
+# Godot
+.import/
+*.import
+*.tmp
+*.cache
+*.mono/
+*.mono.sln
+*.mono.csproj
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup / temporary
+*.bak
+*.swp

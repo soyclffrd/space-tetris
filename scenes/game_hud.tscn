@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://cj36mldvtdhlq"]
+
+[ext_resource type="FontFile" uid="uid://d2bfgnsxm0jso" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_n64bn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n64bn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.33007345, 0.0027246939, 0.11410404, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gjmhc"]
+font = ExtResource("2_n64bn")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_pexd4"]
+font = ExtResource("2_n64bn")
+font_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjmhc"]
+bg_color = Color(0.03529412, 0.007843138, 0.003921569, 0.3882353)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b3s3x"]
+font = ExtResource("2_n64bn")
+font_size = 22
+
+[node name="GameHUD" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 150)
+offset_left = 434.0
+offset_top = 37.0
+offset_right = 634.0
+offset_bottom = 187.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n64bn")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 468.0
+offset_top = 9.0
+offset_right = 598.0
+offset_bottom = 33.0
+text = "Incoming"
+label_settings = SubResource("LabelSettings_gjmhc")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 486.0
+offset_top = 198.0
+offset_right = 582.0
+offset_bottom = 221.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_pexd4")
+
+[node name="Level" type="Label" parent="."]
+offset_left = 488.0
+offset_top = 230.0
+offset_right = 590.0
+offset_bottom = 253.0
+text = "Level: 0"
+label_settings = SubResource("LabelSettings_pexd4")
+
+[node name="GameOver" type="Label" parent="."]
+offset_right = 371.0
+offset_bottom = 703.0
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_gjmhc")
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_b3s3x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGameButton" type="Button" parent="."]
+offset_left = 113.0
+offset_top = 373.0
+offset_right = 251.0
+offset_bottom = 404.0
+theme_override_fonts/font = ExtResource("2_n64bn")
+theme_override_font_sizes/font_size = 11
+text = "Start New Game"

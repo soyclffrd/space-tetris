@@ -1,0 +1,4 @@
+res://scripts/main.gd
+res://scenes/main.tscn
+res://scenes/game_hud.tscn
+res://Tetriminos/README.txt
